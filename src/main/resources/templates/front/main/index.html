@@ -23,7 +23,7 @@
 <!--
     <h1 th:text="#{최신_게시글}"></h1>
     -->
-
+<div class="main_group">
     <!-- Swiper -->
     <div class="main-banner-container">
         <div class="swiper mainSwiper">
@@ -43,104 +43,35 @@
         </div>
     </div>
 
-
-
-
-    <h1>함께만드는 즐거운 헌혈,<br><strong>안전한 수혈, 더 나은 미래</strong></h1>
-    <!-- 오늘의 혈액보유량 -->
-    <div class="blood_notice">
-        <div class="list_box on" id="blood_notice1">
-            <div class="top_wrap">
-                <div class="tit">
-                    <p class="txt">오늘의 혈액보유량</p>
-                    <span>2024.01.25 기준</span>
+    <div class="login_box">
+        <div style="display: block; visibility: visible;" class="login_out" aria-hidden="false">
+        <!--
+        로그인 전 보이는 화면
+         -->
+            <p>
+                로그인 후 다양한 헌혈의집 서비스를 경험해보세요!
+            </p>
+            <a class="btn btn_lg" href="">헌혈의집 로그인</a>
+            <div class="join_find">
+                <div class="join">
+                    <a href="">
+                        회원가입
+                    </a>
                 </div>
-            </div>
-            <div class="blood_list">
-                <ul>
-                    <li>
-                        <p class="bloodType">A</p>
-                        <div class="bloodBar">
-                            <progress value="35.0" max="100"></progress>
-                        </div>
-                        <p class="num">3.5</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">B</p>
-                        <div class="bloodBar">
-                            <progress value="73.0" max="100"></progress>
-                        </div>
-                        <p class="num">7.3</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">O</p>
-                        <div class="bloodBar">
-                            <progress value="35.0" max="100"></progress>
-                        </div>
-                        <p class="num">3.5</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">AB</p>
-                        <div class="bloodBar">
-                            <progress value="44.0" max="100"></progress>
-                        </div>
-                        <p class="num">4.4</p>
-                    </li>
-                </ul>
+                <div class="find">
+                    <a href="">아이디/비밀번호 찾기</a>
+                </div>
             </div>
         </div>
+        <div class="login_in" style="display:none;">
+        <!--
+        로그인 후 보이는 화면
+         -->
 
-        <div class="list_box" id="blood_notice2">
-            <div class="top_wrap">
-                <div class="period">
-                    <div class="circle">
-                        <span>180<em>PER</em></span>
-                    </div>
-                </div>
-                <div class="tit">
-                    <p class="txt">오늘의 혈액보유량</p>
-                    <span>2024.01.25 기준</span>
-                    <p class="day">전체 <strong>180</strong>%</p>
-                </div>
-            </div>
-            <div class="blood_list">
-                <ul>
-                    <li>
-                        <p class="bloodType">A</p>
-                        <div class="bloodBar">
-                            <span class="progressTag" data-progress="35%"></span>
-                        </div>
-                        <p class="num">160</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">B</p>
-                        <div class="bloodBar">
-                             <span class="progressTag" data-progress="73%"></span>
-                        </div>
-                        <p class="num">200</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">O</p>
-                        <div class="bloodBar">
-                            <span class="progressTag" data-progress="35%"></span>
-                        </div>
-                        <p class="num">220</p>
-                    </li>
-                    <li>
-                        <p class="bloodType">AB</p>
-                        <div class="bloodBar">
-                            <span class="progressTag" data-progress="44%"></span>
-                        </div>
-                        <p class="num">140</p>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
-    <!-- //오늘의 혈액보유량 -->
-
-
-
+</div>
+    <h1>함께 만드는 즐거운 헌혈,<br><strong>안전한 수혈, 더 나은 미래</strong></h1>
 
 
 
@@ -148,8 +79,7 @@
         <div class="row row-cols-5">
             <div class="card">
                 <img th:src="@{/common/image/헌혈의 집 찾기.png}">
-                <a href="/reservation/centerChoice">헌혈의 집 찾기
-                </a>
+                <a href="/reservation/centerChoice">헌혈의 집 찾기</a>
             </div>
             <div class="card"> <img th:src="@{/common/image/헌혈예약.png}">
                 <a href="/reservation/main">헌혈예약</a>
@@ -167,60 +97,6 @@
             </div>
         </div>
     </section>
-
-
-    <div class="sub-banner" style="width: 1200px; height: 600px; margin-top: 100px; align: center;">
-        <img th:src="@{/common/image/헌혈이 중요.jpeg}">
-    </div>
-
-
-    <section class="container text-center2" >
-        <div class="row row-cols-5">
-
-            <div class="card2">
-                <img th:src="@{/common/image/b-vi-img-1.png}">
-                <div class="card-body2">
-                    <h5 class="card-title2">262<span>명</span></h5>
-                    <p class="card-text2" style="text-align: center;">시즌4 헌혈 참여인원</p>
-                </div>
-            </div>
-            <div class="card2">
-                <img th:src="@{/common/image/b-vi-img-2.png}">
-
-                <div class="card-body2">
-                    <h5 class="card-title2">150<span>명</span></h5>
-                    <p class="card-text2" style="text-align: center;">시즌4 헌혈 완료인원</p>
-
-                </div>
-            </div>
-            <div class="card2">
-                <img th:src="@{/common/image/b-vi-img-3.png}">
-
-                <div class="card-body2">
-                    <h5 class="card-title2">35,251<span>명</span></h5>
-                    <p class="card-text2" style="text-align: center;">지금까지 참여인원</p>
-
-                </div>
-            </div>
-            <div class="card2">
-                <img th:src="@{/common/image/b-vi-img-4.png}">
-                <div class="card-body2">
-                    <h5 class="card-title2">39,417,000<span>원</span></h5>
-                    <p class="card-text2" style="text-align: center;">시즌4 치료비모금액</p>
-                </div>
-            </div>
-            <div class="card2">
-                <img th:src="@{/common/image/b-vi-img-5.png}">
-                <div class="card-body2">
-                    <h5 class="card-title2">233,681,672<span>원</span></h5>
-                    <p class="card-text2" style="text-align: center;">지금까지 전달된 치료비</p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
 
 </main>

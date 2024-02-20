@@ -110,12 +110,11 @@ header nav > .inner a:hover { background: #222; }
         .search-box>input{
             margin:auto;
             width: 200px;
-            border: 2px solid green;
+            border: 2px solid #ced4da;
             height: 40px;
             float:right;
             line-height: 30px;
             border-radius: 30px;
-            text-align: center;
         }
 
 
@@ -137,14 +136,14 @@ header nav > .inner a:hover { background: #222; }
 input[type='text'],
 input[type='password'],
 input[type='email'] {
-        width: 200px;
-        height: 40px;
+        width: 220px;
+        height: 44px;
         padding: 0 10px;
-        border: 2px solid green;
+        border: 2px solid #ced4da;
         line-height: 30px;
-        border-radius: 30px;
+        border-radius: 20px;
         display:block;
-        padding:5px;
+        padding:14px;
         margin:10px;
 
     }
@@ -184,9 +183,8 @@ select { height: 40px; border: 1px solid #d5d5d5; border-radius: 3px; }
     margin: auto;
     padding: 20px;
     padding: 20px 0;
-      font-size: 14px;
-      transition: all 0.3s;
-      border-top: 1px solid #cddfff;
+    font-size: 14px;
+    transition: all 0.3s;
 }
 .footer li{
             float: right;
