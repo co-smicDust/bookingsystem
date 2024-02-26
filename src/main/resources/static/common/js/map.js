@@ -87,6 +87,7 @@ commonLib.map = {
                                 infoWindow(map, lat, lng, pos.content, marker);
                             }
 
+
                             map.setCenter(coords);
                        }
                     });
@@ -106,7 +107,6 @@ commonLib.map = {
 
                 }
             }
-
 
             return;
         }
@@ -200,11 +200,11 @@ commonLib.map = {
         * 인포윈도우 표시
         *
         */
-        function infoWindow(map, lat, lng, content, marker) {
+        function infoWindow(map, lat, lng, cont, marker) {
             var infowin = new kakao.maps.InfoWindow({
                             map,
                             position : new kakao.maps.LatLng(lat, lng),
-                            content,
+                            content : cont,
                             removable : true
                         });
             infowin.open(map, marker);

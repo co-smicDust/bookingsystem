@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{front/layouts/main}">
+      layout:decorate="~{front/layouts/main}"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <th:block layout:fragment="addCommonScript">
     <!-- Swiper JS -->
@@ -44,31 +45,37 @@
     </div>
 
     <div class="login_box">
-        <div style="display: block; visibility: visible;" class="login_out" aria-hidden="false">
-        <!--
-        로그인 전 보이는 화면
-         -->
+        <!--<th:block sec:authorize="isAnonymous()">-->
+        <th:block sec:authorize="isAnonymous()">
+            <!--로그인 전 보이는 화면-->
             <p>
-                로그인 후 다양한 헌혈의집 서비스를 경험해보세요!
+                <span>Red Bank</span>에 오신 것을 환영합니다!<br>로그인 후 다양한 <span>헌혈 관련 서비스</span>를<br>경험해보세요!
             </p>
-            <a class="btn btn_lg" href="">헌혈의집 로그인</a>
+            <a class="btn" href="/member/login">Red Bank 로그인</a>
             <div class="join_find">
                 <div class="join">
-                    <a href="">
-                        회원가입
+                    <a href="/member/join">
+                            회원가입
                     </a>
                 </div>
                 <div class="find">
-                    <a href="">아이디/비밀번호 찾기</a>
+                    <a href="">비밀번호 찾기</a>
                 </div>
             </div>
-        </div>
-        <div class="login_in" style="display:none;">
-        <!--
-        로그인 후 보이는 화면
-         -->
+        </th:block>
 
-        </div>
+        <th:block sec:authorize="isAuthenticated()">
+            <!--로그인 후 보이는 화면-->
+            <p>
+                반갑습니다 <span>회원</span>님!<br>회원님의 누적 헌혈 횟수는 <span>n</span>번입니다.
+            </p>
+            <a class="btn" th:href="@{/mypage}" th:text="#{마이페이지}"></a>
+            <div class="join_find">
+                <div class="lout">
+                    <a th:href="@{/member/logout}" th:text="#{로그아웃}"></a>
+                </div>
+            </div>
+        </th:block>
     </div>
 </div>
     <h1>함께 만드는 즐거운 헌혈,<br><strong>안전한 수혈, 더 나은 미래</strong></h1>

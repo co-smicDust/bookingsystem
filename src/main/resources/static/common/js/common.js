@@ -80,7 +80,7 @@ commonLib.loadEditor = function(id, height) {
 commonLib.sendEmailVerify = function(email) {
     const { ajaxLoad } = commonLib;
 
-    const url = `/api/email/verify?email=${email}`;
+    const url = `/api/email/verify?email=${email}`;     // error: 500
 
     ajaxLoad("GET", url, null, "json")
         .then(data => {
