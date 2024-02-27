@@ -75,15 +75,17 @@ header nav > .inner a:hover { background: #222; }
             font-family: '맑은 고딕';
         }
 
-        .gnb{ width:1200px;
+        .gnb{
+            width:1200px;
             margin:auto;
             overflow: auto;
-
-
         }
         .gnb>ul{ float:right;}
-        .gnb li{ float:left; }
-        .gnb a{ padding: 10px; display: block; }
+        .gnb li{
+                float:left;
+                padding: 10px;
+                display: block;}
+        .gnb span{ color: red; font-weight: bold;}
 
         .header-container{
             width:1380px;

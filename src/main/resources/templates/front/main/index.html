@@ -67,7 +67,7 @@
         <th:block sec:authorize="isAuthenticated()">
             <!--로그인 후 보이는 화면-->
             <p>
-                반갑습니다 <span>회원</span>님!<br>회원님의 누적 헌혈 횟수는 <span>n</span>번입니다.
+                반갑습니다 <span th:text="${#messages.msg('USERID', session.member.mName,session.member.userId)}"></span>님!<br>회원님의 헌혈 예약 정보와 헌혈 내역을<br>조회해보세요.
             </p>
             <a class="btn" th:href="@{/mypage}" th:text="#{마이페이지}"></a>
             <div class="join_find">

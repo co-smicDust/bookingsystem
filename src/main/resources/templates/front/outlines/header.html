@@ -17,11 +17,9 @@
     <!--로그인 후 템플릿-->
     <th:block sec:authorize="isAuthenticated()"><!--로그인 상태-->
 
-        <!--환영 메세지-->
-        <span th:text="${#messages.msg('LOGIN_MSG',session.member.mName,session.member.userId)}"></span>
-
         <div class="gnb">
             <ul>
+                <li><span th:text="${#messages.msg('LOGIN_MSG',session.member.mName,session.member.userId)}"></span></li>
                 <li><a th:href="@{/mypage}" th:text="#{마이페이지}"></a></li>
                 <li><a th:href="@{/member/logout}" th:text="#{로그아웃}"></a></li>
                 <li><a th:href="@{/board/list/talk}">1:1 문의</a></li>
@@ -44,7 +42,7 @@
         <ul>
             <li><a href="/reservation/centerChoice">헌혈의집 찾기</a></li>
             <li><a href="/reservation/main">헌혈예약</a></li>
-            <li><a href="">헌혈내역조회</a></li>
+            <li><a href="/mypage/bloodview">헌혈내역</a></li>
             <li><a th:href="@{/board/list/qna}">자주묻는질문</a></li>
             <li><a th:href="@{/board/list/talk}">고객상담</a></li>
         </ul>
