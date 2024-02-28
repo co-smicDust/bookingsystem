@@ -17,19 +17,9 @@
 
 ### 2. 사용 기술
 #### 2-1. 백엔드
-- 주요 프레임워크 / 라이브러리
-  - Java 17
-  - SpringBoot 3.2.0
-  - JPA(Spring Data JPA)
-  - Spring Security
-  - Thymeleaf
-  - Validation
-  - Lombok
-  - Spring Web
-- Build Tool
-  - Gradle 7.2
-- DataBase
-  - Oracle 11
+|주요 프레임워크 / 라이브러리</span>|Build Tool / DataBase / etc...|
+|---------------------------|------------------------------|
+|- Java 17<br>- SpringBoot 3.2.0<br>- JPA(Spring Data JPA)<br>- Spring Security<br>- Thymeleaf<br>- Validation<br>- Lombok<br>- Spring Web|- Gradle 7.2<br>- Oracle 11<br>- kakaomap API|
 #### 2-2. 프론트엔드
 - Html/Css
 - JavaScript
